@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {v4 as uuid} from 'uuid';
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import TodoInput from './components/TodoInput';
 
 import TodoList from './components/TodoList';
@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      
    
     <div className="container">
       <div className="row">
@@ -34,12 +34,12 @@ class App extends Component {
           <h3 className="text-capitalize text-center"> todo input</h3>
 
         </div>
+        
        <TodoInput 
        item={this.state.item} 
        handleChange={this.handleChange} 
        handleSubmit={this.handleSubmit} 
        editItem={this.state.editItem}
-       
        />
        <TodoList 
        items={this.state.items}
@@ -51,7 +51,7 @@ class App extends Component {
 
      </div>
    </div>
-   </div>
+   
     )
   }
 }
