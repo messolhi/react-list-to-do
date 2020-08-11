@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Item from "./TodoItem";
+
 import TodoItem from './TodoItem';
 
 
