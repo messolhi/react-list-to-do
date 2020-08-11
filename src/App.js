@@ -32,11 +32,19 @@ class App extends Component {
       item:"",
       id:uuid(),
       editItem: false
-    },
-    ()=>console.log(this.state));
-    }; 
-  clearList =()=>{console.log(`clear list`)};
-  handleDelete =(id)=>{console.log(`handle delete ${id}`)};
+    });
+  }; 
+  clearList =()=>{
+    this.setState({
+      items:[]
+    })
+  };
+  handleDelete =(id)=>{
+    const filterredItems = this.state.items.filter(item=>item.id !==id);
+    this.setState({
+      items: filterredItems
+    });
+  };
   handleEdit =(id)=>{console.log(`handle edit ${id}`)};
 
   render() {
